@@ -3,7 +3,7 @@ import io from "socket.io-client";
 let socket = null;
 
 export const initSocket = (userId, username) => {
-  socket = io("http://localhost:5001", {
+ socket = io("https://playfusion-production.up.railway.app", {
     auth: {
       userId,
       username,

@@ -1,0 +1,41 @@
+.statistics{
+    background:#07111f;
+    padding:100px 80px;
+}
+
+.statistics h2{
+    text-align:center;
+    color:#00E5FF;
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-card{
+    background:#111827;
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+    transition:.4s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px cyan;
+}
+
+.stat-card h1{
+    color:#00E5FF;
+    font-size:55px;
+}
+
+.stat-card p{
+    margin-top:15px;
+    color:white;
+    font-size:20px;
+}

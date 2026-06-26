@@ -1,0 +1,44 @@
+.leaderboard{
+    padding:100px 80px;
+    background:#0B1220;
+}
+
+.leaderboard h2{
+    text-align:center;
+    color:#00E5FF;
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.leaderboard-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.player-card{
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.player-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px cyan;
+}
+
+.player-card h1{
+    font-size:60px;
+}
+
+.player-card h3{
+    color:white;
+    margin:20px 0 10px;
+}
+
+.player-card p{
+    color:#00E5FF;
+    font-size:20px;
+}

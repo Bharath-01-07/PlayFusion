@@ -1,0 +1,111 @@
+.memory-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  gap: 20px;
+}
+
+.memory-title {
+  font-size: 3rem;
+  margin: 20px 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.memory-stats {
+  display: flex;
+  gap: 30px;
+  font-size: 1.3rem;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.memory-card {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.memory-card:hover:not(.flipped) {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.memory-card.flipped {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.memory-game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  z-index: 1000;
+}
+
+.memory-game-over h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ff88;
+}
+
+.memory-game-over p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.memory-restart {
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.memory-restart:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.memory-restart:active {
+  transform: scale(0.95);
+}

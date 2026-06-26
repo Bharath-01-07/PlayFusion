@@ -1,0 +1,117 @@
+.flappy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  gap: 20px;
+}
+
+.flappy-title {
+  font-size: 3rem;
+  margin: 20px 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.flappy-game {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.flappy-bird {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: flap 0.5s infinite;
+}
+
+@keyframes flap {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+.flappy-pipe {
+  box-shadow: inset -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.flappy-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.flappy-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00ff88;
+}
+
+.flappy-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.flappy-restart-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #00ff88, #00d4ff);
+  color: #0f0c29;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.flappy-restart-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+.flappy-score {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.flappy-restart {
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.flappy-restart:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.flappy-restart:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,169 @@
+.hangman-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.hangman-drawing {
+  width: 150px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.head {
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 55px;
+}
+
+.body {
+  width: 3px;
+  height: 50px;
+  background: white;
+  position: absolute;
+  top: 60px;
+  left: 76px;
+}
+
+.left-arm {
+  width: 40px;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 80px;
+  left: 36px;
+  transform: rotate(-30deg);
+}
+
+.right-arm {
+  width: 40px;
+  height: 3px;
+  background: white;
+  position: absolute;
+  top: 80px;
+  right: 36px;
+  transform: rotate(30deg);
+}
+
+.left-leg {
+  width: 40px;
+  height: 3px;
+  background: white;
+  position: absolute;
+  bottom: 30px;
+  left: 46px;
+  transform: rotate(-30deg);
+}
+
+.right-leg {
+  width: 40px;
+  height: 3px;
+  background: white;
+  position: absolute;
+  bottom: 30px;
+  right: 46px;
+  transform: rotate(30deg);
+}
+
+.word-display {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.letter {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alphabet-buttons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.alphabet-buttons button {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.alphabet-buttons button:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.alphabet-buttons button.used {
+  opacity: 0.5;
+}
+
+.alphabet-buttons button:disabled {
+  cursor: not-allowed;
+}
+
+.game-over {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-over h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+.game-over p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.game-over button {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
